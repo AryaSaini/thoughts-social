@@ -80,7 +80,6 @@ Use the following guidelines to set up your models and API routes:
 
 * `thoughts`
   * Array of `_id` values referencing the `Thought` model
-
 * `friends`
   * Array of `_id` values referencing the `User` model (self-reference)
 
