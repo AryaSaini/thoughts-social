@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const reactionSchema = new Schema({
-    reactionID: {
+    reactionId: {
         type: Schema.Types.ObjectId,
         default: () => new mongoose.Types.ObjectId()
     },
@@ -27,7 +27,7 @@ const thoughtSchema = new Schema({
     thoughtText: {
         type: String,
         required: true,
-        maxlength: 280
+        max_length: 280
     },
     createdAt: {
         type: Date,
@@ -38,7 +38,7 @@ const thoughtSchema = new Schema({
         type: String,
         required: true
     },
-    reaction: [reactionSchema]
+    reactions: [reactionSchema]
 },
     {
         toJSON: {
